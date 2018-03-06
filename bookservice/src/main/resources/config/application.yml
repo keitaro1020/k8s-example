@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:h2:mem:test;MODE=MySQL;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+
+---
+spring:
+  profiles: k8s
+  datasource:
+    url: jdbc:mysql://book.database/book
+    username: user
+    password: password
+    driverClassName: com.mysql.jdbc.Driver
