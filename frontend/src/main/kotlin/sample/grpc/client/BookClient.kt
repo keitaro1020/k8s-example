@@ -4,12 +4,10 @@ import com.google.protobuf.Empty
 import io.grpc.okhttp.OkHttpChannelBuilder
 import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.stereotype.Component
-import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 import sample.BookOuterClass
 import sample.BookServiceGrpc
 import sample.model.Book
-import java.util.*
 
 @Component
 @ConfigurationProperties(prefix = "grpc.book")
