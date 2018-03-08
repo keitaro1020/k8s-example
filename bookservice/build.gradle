@@ -74,9 +74,9 @@ dependencies {
     compile("com.fasterxml.jackson.module:jackson-module-kotlin:2.9.3")
 
     // h2
-    runtime("com.h2database:h2")
-    // mysql
-    runtime("mysql:mysql-connector-java")
+    runtime("com.h2database:h2:+")
+    // postgresql
+    runtime("postgresql:postgresql:+")
 
     // grpc
     compile('org.lognet:grpc-spring-boot-starter:+')

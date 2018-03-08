@@ -1,20 +1,30 @@
 package sample.grpc.client
 
 import com.google.protobuf.Empty
+import io.grpc.ManagedChannel
 import io.grpc.okhttp.OkHttpChannelBuilder
 import org.springframework.boot.context.properties.ConfigurationProperties
+import org.springframework.core.env.Environment
 import org.springframework.stereotype.Component
 import reactor.core.publisher.Mono
 import sample.BookOuterClass
 import sample.BookServiceGrpc
+import sample.controller.HealthzController
 import sample.model.Book
+import java.util.logging.Logger
 
 @Component
-@ConfigurationProperties(prefix = "grpc.book")
-class BookClient {
+class BookClient (
+        val env: Environment
+){
 
-    private var hostname: String = "localhost"
-    private var port: Int = 6565
+    private lateinit var hostname: String
+    private lateinit var port: String
+
+    init {
+        hostname = env.getProperty("grpc.book.hostname", "")
+        port = env.getProperty("grpc.book.port", "")
+    }
 
     fun create(book: Book): Mono<Book> {
 
@@ -57,7 +67,11 @@ class BookClient {
         }
     }
 
-    private fun getChannel() = OkHttpChannelBuilder.forAddress(hostname, port)
-            .usePlaintext(true)
-            .build()
+    val logger = Logger.getLogger(HealthzController::class.java.name)
+    private fun getChannel() : ManagedChannel {
+        logger.info("hostname: ${hostname}, port: ${port}")
+
+        return OkHttpChannelBuilder.forAddress(hostname, port.toInt())
+                .usePlaintext(true)
+                .build()    }
 }

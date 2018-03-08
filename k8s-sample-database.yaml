@@ -1,0 +1,46 @@
+# database deployment
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: book-db-deployment
+  namespace: bookshelf-system
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: book-db
+    spec:
+      containers:
+        - name: book-db
+          image: postgres:9.6.2
+          env:
+            - name: POSTGRES_USER
+              value: user
+            - name: POSTGRES_PASSWORD
+              value: password
+            - name: POSTGRES_DB
+              value: book
+          ports:
+            - containerPort: 5432
+          volumeMounts:
+            - mountPath: /var/lib/postgresql
+              name: book-db-data
+      restartPolicy: Always
+      volumes:
+        - name: book-db-data
+          emptyDir: {}
+---
+# database service
+apiVersion: v1
+kind: Service
+metadata:
+  name: book-db
+  namespace: bookshelf-system
+spec:
+  selector:
+    app: book-db
+  ports:
+    - protocol: TCP
+      port: 5432
+      targetPort: 5432

@@ -58,7 +58,6 @@ compileTestKotlin {
 
 dependencies {
     // springboot
-    compile("org.springframework.boot:spring-boot-devtools")
     compile("org.springframework.boot:spring-boot-starter-webflux")
 
     // kotlin
