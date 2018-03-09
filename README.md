@@ -6,23 +6,23 @@
 ## Usage (on minikube)
 1. [Install minikube](https://github.com/kubernetes/minikube)
 2. Build & Create Docker Image
-  1. minikube docker path
-  ```
-  $ eval $(minikube docker-env)
-  ```
-  2. frontend service build
-  ```
-  $ cd frontend/web
-  $ npm install
-  $ npm run build
-  $ cd ../
-  $ ./gradlew build docker
-  ```
-  3. bookservice build
-  ```
-  $ cd bookservice
-  $ ./gradlew build docker
-  ```
+    1. minikube docker path
+    ```
+    $ eval $(minikube docker-env)
+    ```
+    2. frontend service build
+    ```
+    $ cd frontend/web
+    $ npm install
+    $ npm run build
+    $ cd ../
+    $ ./gradlew build docker
+    ```
+    3. bookservice build
+    ```
+    $ cd bookservice
+    $ ./gradlew build docker
+    ```
 3. Create Kubernetes Namespace
 ```
 $ kubectl create namespace bookshelf-system
