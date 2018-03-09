@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: bookservice
-        image: sample/bookservice:0.0.1-SNAPSHOT
+        image: sample/bookservice:0.0.1
         env:
         - name: JAVA_OPTS
           value: -Dspring.profiles.active=k8s
@@ -47,9 +47,9 @@ spec:
           failureThreshold: 3
         resources:
           limits:
-            memory: "512Mi"
-          requests:
             memory: "256Mi"
+          requests:
+            memory: "128Mi"
 ---
 # bookservice-service
 apiVersion: v1

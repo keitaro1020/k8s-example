@@ -26,6 +26,11 @@ spec:
           volumeMounts:
             - mountPath: /var/lib/postgresql
               name: book-db-data
+          resources:
+            limits:
+              memory: "512Mi"
+            requests:
+              memory: "256Mi"
       restartPolicy: Always
       volumes:
         - name: book-db-data

@@ -1,5 +1,5 @@
 group 'sample'
-version '0.0.1-SNAPSHOT'
+version '0.0.2'
 
 buildscript {
     ext {
@@ -59,6 +59,7 @@ compileTestKotlin {
 dependencies {
     // springboot
     compile("org.springframework.boot:spring-boot-starter-webflux")
+    compile("org.springframework.boot:spring-boot-starter-freemarker")
 
     // kotlin
     compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
@@ -93,7 +94,7 @@ protobuf {
     generateProtoTasks {
         all()*.plugins {
             grpc {
-                // To generate deprecated interfaces and static bindService method,
+                // To generate deprecated interfaces and templates bindService method,
                 // turn the enable_deprecated option to true below:
                 option 'enable_deprecated=false'
             }

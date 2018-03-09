@@ -67,6 +67,20 @@ class BookClient (
         }
     }
 
+    fun delete(id: Long) {
+
+        logger.info("id:${id}")
+        val channel = getChannel()
+        try {
+            val stub = BookServiceGrpc.newBlockingStub(getChannel())
+            val reqBuilder = BookOuterClass.DeleteRequest.newBuilder()
+            reqBuilder.id = id
+            stub.delete(reqBuilder.build())
+        } finally {
+            channel.shutdown()
+        }
+    }
+
     val logger = Logger.getLogger(HealthzController::class.java.name)
     private fun getChannel() : ManagedChannel {
         logger.info("hostname: ${hostname}, port: ${port}")

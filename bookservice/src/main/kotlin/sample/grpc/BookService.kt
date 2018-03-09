@@ -46,6 +46,7 @@ class BookService(val bookDao: BookDao): BookServiceGrpc.BookServiceImplBase() {
 
     override fun delete(request: BookOuterClass.DeleteRequest, responseObserver: StreamObserver<Empty>) {
         bookDao.delete(id = request.id)
+        responseObserver.onNext(Empty.newBuilder().build())
         responseObserver.onCompleted()
     }
 }

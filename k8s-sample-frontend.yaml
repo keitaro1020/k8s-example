@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: sample/frontend:0.0.1-SNAPSHOT
+        image: sample/frontend:0.0.2
         env:
         - name: JAVA_OPTS
           value: -Dspring.profiles.active=k8s
@@ -47,9 +47,9 @@ spec:
           failureThreshold: 3
         resources:
           limits:
-            memory: "512Mi"
-          requests:
             memory: "256Mi"
+          requests:
+            memory: "128Mi"
 ---
 # frontendservice-service
 apiVersion: v1
