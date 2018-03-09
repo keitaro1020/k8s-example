@@ -1,7 +1,7 @@
 # Kubernetes Microservice Example
 
 ## system diagram
-![diagram](https://raw.github.com/wiki/keitaro1020/k8s-example/k8s-example-system.png)
+![diagram](https://raw.githubusercontent.com/keitaro1020/k8s-example/master/k8s-example-system.png)
 
 ## Usage (on minikube)
 1. [Install minikube](https://github.com/kubernetes/minikube)
