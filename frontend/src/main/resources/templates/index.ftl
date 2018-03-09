@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <title>k8s-sample</title>
+    <title>k8s-example</title>
     <link rel="stylesheet" href="/dist/main.css">
   </head>
   <body>

@@ -1,6 +1,6 @@
 {
-  "name": "k8s-sample",
-  "description": "kubernetes sample",
+  "name": "k8s-example",
+  "description": "kubernetes example",
   "version": "1.0.0",
   "author": "keitaro.shishido@gmail.com",
   "private": true,

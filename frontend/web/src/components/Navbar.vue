@@ -5,7 +5,7 @@
 
     <b-navbar-brand router-link to="/">
         <img src="../assets/kubernetes-logo.svg" alt="BV" style="height:30px; width:30px;">
-        k8s sample
+        k8s example
     </b-navbar-brand>
 
     <b-collapse is-nav id="nav_collapse">

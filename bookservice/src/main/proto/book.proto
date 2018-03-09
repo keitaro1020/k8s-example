@@ -2,7 +2,7 @@ syntax = "proto3";
 
 import "google/protobuf/empty.proto";
 
-option java_package = "sample";
+option java_package = "example";
 
 service BookService {
     rpc Create ( CreateRequest ) returns ( Book ) {}
