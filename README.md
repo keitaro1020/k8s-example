@@ -23,6 +23,11 @@
     $ cd bookservice
     $ ./gradlew build docker
     ```
+    4. bookshelfservice build
+    ```
+    $ cd bookshelfservice
+    $ ./gradlew build docker
+    ```
 3. Create Kubernetes Namespace
 ```
 $ kubectl create namespace bookshelf-system
@@ -31,5 +36,6 @@ $ kubectl create namespace bookshelf-system
 ```
 $ kubectl apply -f k8s-example-database.yaml 
 $ kubectl apply -f k8s-example-bookservice.yaml 
+$ kubectl apply -f k8s-example-bookshelfservice.yaml 
 $ kubectl apply -f k8s-example-frontend.yaml 
 ```

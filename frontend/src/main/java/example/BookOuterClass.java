@@ -14,8 +14,8 @@ public final class BookOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface CreateRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CreateRequest)
+  public interface CreateBookRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CreateBookRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -39,17 +39,17 @@ public final class BookOuterClass {
         getAuthorBytes();
   }
   /**
-   * Protobuf type {@code CreateRequest}
+   * Protobuf type {@code CreateBookRequest}
    */
-  public  static final class CreateRequest extends
+  public  static final class CreateBookRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:CreateRequest)
-      CreateRequestOrBuilder {
-    // Use CreateRequest.newBuilder() to construct.
-    private CreateRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:CreateBookRequest)
+      CreateBookRequestOrBuilder {
+    // Use CreateBookRequest.newBuilder() to construct.
+    private CreateBookRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private CreateRequest() {
+    private CreateBookRequest() {
       title_ = "";
       author_ = "";
     }
@@ -59,7 +59,7 @@ public final class BookOuterClass {
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
     }
-    private CreateRequest(
+    private CreateBookRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -104,14 +104,14 @@ public final class BookOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return example.BookOuterClass.internal_static_CreateRequest_descriptor;
+      return example.BookOuterClass.internal_static_CreateBookRequest_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return example.BookOuterClass.internal_static_CreateRequest_fieldAccessorTable
+      return example.BookOuterClass.internal_static_CreateBookRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              example.BookOuterClass.CreateRequest.class, example.BookOuterClass.CreateRequest.Builder.class);
+              example.BookOuterClass.CreateBookRequest.class, example.BookOuterClass.CreateBookRequest.Builder.class);
     }
 
     public static final int TITLE_FIELD_NUMBER = 1;
@@ -223,10 +223,10 @@ public final class BookOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof example.BookOuterClass.CreateRequest)) {
+      if (!(obj instanceof example.BookOuterClass.CreateBookRequest)) {
         return super.equals(obj);
       }
-      example.BookOuterClass.CreateRequest other = (example.BookOuterClass.CreateRequest) obj;
+      example.BookOuterClass.CreateBookRequest other = (example.BookOuterClass.CreateBookRequest) obj;
 
       boolean result = true;
       result = result && getTitle()
@@ -252,58 +252,58 @@ public final class BookOuterClass {
       return hash;
     }
 
-    public static example.BookOuterClass.CreateRequest parseFrom(
+    public static example.BookOuterClass.CreateBookRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.BookOuterClass.CreateRequest parseFrom(
+    public static example.BookOuterClass.CreateBookRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.BookOuterClass.CreateRequest parseFrom(byte[] data)
+    public static example.BookOuterClass.CreateBookRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.BookOuterClass.CreateRequest parseFrom(
+    public static example.BookOuterClass.CreateBookRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.BookOuterClass.CreateRequest parseFrom(java.io.InputStream input)
+    public static example.BookOuterClass.CreateBookRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static example.BookOuterClass.CreateRequest parseFrom(
+    public static example.BookOuterClass.CreateBookRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static example.BookOuterClass.CreateRequest parseDelimitedFrom(java.io.InputStream input)
+    public static example.BookOuterClass.CreateBookRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static example.BookOuterClass.CreateRequest parseDelimitedFrom(
+    public static example.BookOuterClass.CreateBookRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static example.BookOuterClass.CreateRequest parseFrom(
+    public static example.BookOuterClass.CreateBookRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static example.BookOuterClass.CreateRequest parseFrom(
+    public static example.BookOuterClass.CreateBookRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -315,7 +315,7 @@ public final class BookOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(example.BookOuterClass.CreateRequest prototype) {
+    public static Builder newBuilder(example.BookOuterClass.CreateBookRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -330,25 +330,25 @@ public final class BookOuterClass {
       return builder;
     }
     /**
-     * Protobuf type {@code CreateRequest}
+     * Protobuf type {@code CreateBookRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CreateRequest)
-        example.BookOuterClass.CreateRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:CreateBookRequest)
+        example.BookOuterClass.CreateBookRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return example.BookOuterClass.internal_static_CreateRequest_descriptor;
+        return example.BookOuterClass.internal_static_CreateBookRequest_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return example.BookOuterClass.internal_static_CreateRequest_fieldAccessorTable
+        return example.BookOuterClass.internal_static_CreateBookRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                example.BookOuterClass.CreateRequest.class, example.BookOuterClass.CreateRequest.Builder.class);
+                example.BookOuterClass.CreateBookRequest.class, example.BookOuterClass.CreateBookRequest.Builder.class);
       }
 
-      // Construct using example.BookOuterClass.CreateRequest.newBuilder()
+      // Construct using example.BookOuterClass.CreateBookRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -374,23 +374,23 @@ public final class BookOuterClass {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return example.BookOuterClass.internal_static_CreateRequest_descriptor;
+        return example.BookOuterClass.internal_static_CreateBookRequest_descriptor;
       }
 
-      public example.BookOuterClass.CreateRequest getDefaultInstanceForType() {
-        return example.BookOuterClass.CreateRequest.getDefaultInstance();
+      public example.BookOuterClass.CreateBookRequest getDefaultInstanceForType() {
+        return example.BookOuterClass.CreateBookRequest.getDefaultInstance();
       }
 
-      public example.BookOuterClass.CreateRequest build() {
-        example.BookOuterClass.CreateRequest result = buildPartial();
+      public example.BookOuterClass.CreateBookRequest build() {
+        example.BookOuterClass.CreateBookRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public example.BookOuterClass.CreateRequest buildPartial() {
-        example.BookOuterClass.CreateRequest result = new example.BookOuterClass.CreateRequest(this);
+      public example.BookOuterClass.CreateBookRequest buildPartial() {
+        example.BookOuterClass.CreateBookRequest result = new example.BookOuterClass.CreateBookRequest(this);
         result.title_ = title_;
         result.author_ = author_;
         onBuilt();
@@ -424,16 +424,16 @@ public final class BookOuterClass {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof example.BookOuterClass.CreateRequest) {
-          return mergeFrom((example.BookOuterClass.CreateRequest)other);
+        if (other instanceof example.BookOuterClass.CreateBookRequest) {
+          return mergeFrom((example.BookOuterClass.CreateBookRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(example.BookOuterClass.CreateRequest other) {
-        if (other == example.BookOuterClass.CreateRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(example.BookOuterClass.CreateBookRequest other) {
+        if (other == example.BookOuterClass.CreateBookRequest.getDefaultInstance()) return this;
         if (!other.getTitle().isEmpty()) {
           title_ = other.title_;
           onChanged();
@@ -454,11 +454,11 @@ public final class BookOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        example.BookOuterClass.CreateRequest parsedMessage = null;
+        example.BookOuterClass.CreateBookRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (example.BookOuterClass.CreateRequest) e.getUnfinishedMessage();
+          parsedMessage = (example.BookOuterClass.CreateBookRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -616,46 +616,586 @@ public final class BookOuterClass {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:CreateRequest)
+      // @@protoc_insertion_point(builder_scope:CreateBookRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:CreateRequest)
-    private static final example.BookOuterClass.CreateRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:CreateBookRequest)
+    private static final example.BookOuterClass.CreateBookRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new example.BookOuterClass.CreateRequest();
+      DEFAULT_INSTANCE = new example.BookOuterClass.CreateBookRequest();
     }
 
-    public static example.BookOuterClass.CreateRequest getDefaultInstance() {
+    public static example.BookOuterClass.CreateBookRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CreateRequest>
-        PARSER = new com.google.protobuf.AbstractParser<CreateRequest>() {
-      public CreateRequest parsePartialFrom(
+    private static final com.google.protobuf.Parser<CreateBookRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CreateBookRequest>() {
+      public CreateBookRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new CreateRequest(input, extensionRegistry);
+          return new CreateBookRequest(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<CreateRequest> parser() {
+    public static com.google.protobuf.Parser<CreateBookRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CreateRequest> getParserForType() {
+    public com.google.protobuf.Parser<CreateBookRequest> getParserForType() {
       return PARSER;
     }
 
-    public example.BookOuterClass.CreateRequest getDefaultInstanceForType() {
+    public example.BookOuterClass.CreateBookRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface DeleteRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:DeleteRequest)
+  public interface FindBookByIdsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:FindBookByIdsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated int64 id = 1;</code>
+     */
+    java.util.List<java.lang.Long> getIdList();
+    /**
+     * <code>repeated int64 id = 1;</code>
+     */
+    int getIdCount();
+    /**
+     * <code>repeated int64 id = 1;</code>
+     */
+    long getId(int index);
+  }
+  /**
+   * Protobuf type {@code FindBookByIdsRequest}
+   */
+  public  static final class FindBookByIdsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:FindBookByIdsRequest)
+      FindBookByIdsRequestOrBuilder {
+    // Use FindBookByIdsRequest.newBuilder() to construct.
+    private FindBookByIdsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FindBookByIdsRequest() {
+      id_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private FindBookByIdsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                id_ = new java.util.ArrayList<java.lang.Long>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              id_.add(input.readInt64());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001) && input.getBytesUntilLimit() > 0) {
+                id_ = new java.util.ArrayList<java.lang.Long>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                id_.add(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          id_ = java.util.Collections.unmodifiableList(id_);
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return example.BookOuterClass.internal_static_FindBookByIdsRequest_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return example.BookOuterClass.internal_static_FindBookByIdsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              example.BookOuterClass.FindBookByIdsRequest.class, example.BookOuterClass.FindBookByIdsRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.util.List<java.lang.Long> id_;
+    /**
+     * <code>repeated int64 id = 1;</code>
+     */
+    public java.util.List<java.lang.Long>
+        getIdList() {
+      return id_;
+    }
+    /**
+     * <code>repeated int64 id = 1;</code>
+     */
+    public int getIdCount() {
+      return id_.size();
+    }
+    /**
+     * <code>repeated int64 id = 1;</code>
+     */
+    public long getId(int index) {
+      return id_.get(index);
+    }
+    private int idMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (getIdList().size() > 0) {
+        output.writeUInt32NoTag(10);
+        output.writeUInt32NoTag(idMemoizedSerializedSize);
+      }
+      for (int i = 0; i < id_.size(); i++) {
+        output.writeInt64NoTag(id_.get(i));
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < id_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt64SizeNoTag(id_.get(i));
+        }
+        size += dataSize;
+        if (!getIdList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        idMemoizedSerializedSize = dataSize;
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof example.BookOuterClass.FindBookByIdsRequest)) {
+        return super.equals(obj);
+      }
+      example.BookOuterClass.FindBookByIdsRequest other = (example.BookOuterClass.FindBookByIdsRequest) obj;
+
+      boolean result = true;
+      result = result && getIdList()
+          .equals(other.getIdList());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (getIdCount() > 0) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getIdList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static example.BookOuterClass.FindBookByIdsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static example.BookOuterClass.FindBookByIdsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static example.BookOuterClass.FindBookByIdsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static example.BookOuterClass.FindBookByIdsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static example.BookOuterClass.FindBookByIdsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static example.BookOuterClass.FindBookByIdsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static example.BookOuterClass.FindBookByIdsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static example.BookOuterClass.FindBookByIdsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static example.BookOuterClass.FindBookByIdsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static example.BookOuterClass.FindBookByIdsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(example.BookOuterClass.FindBookByIdsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code FindBookByIdsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:FindBookByIdsRequest)
+        example.BookOuterClass.FindBookByIdsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return example.BookOuterClass.internal_static_FindBookByIdsRequest_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return example.BookOuterClass.internal_static_FindBookByIdsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                example.BookOuterClass.FindBookByIdsRequest.class, example.BookOuterClass.FindBookByIdsRequest.Builder.class);
+      }
+
+      // Construct using example.BookOuterClass.FindBookByIdsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        id_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return example.BookOuterClass.internal_static_FindBookByIdsRequest_descriptor;
+      }
+
+      public example.BookOuterClass.FindBookByIdsRequest getDefaultInstanceForType() {
+        return example.BookOuterClass.FindBookByIdsRequest.getDefaultInstance();
+      }
+
+      public example.BookOuterClass.FindBookByIdsRequest build() {
+        example.BookOuterClass.FindBookByIdsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public example.BookOuterClass.FindBookByIdsRequest buildPartial() {
+        example.BookOuterClass.FindBookByIdsRequest result = new example.BookOuterClass.FindBookByIdsRequest(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          id_ = java.util.Collections.unmodifiableList(id_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.id_ = id_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof example.BookOuterClass.FindBookByIdsRequest) {
+          return mergeFrom((example.BookOuterClass.FindBookByIdsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(example.BookOuterClass.FindBookByIdsRequest other) {
+        if (other == example.BookOuterClass.FindBookByIdsRequest.getDefaultInstance()) return this;
+        if (!other.id_.isEmpty()) {
+          if (id_.isEmpty()) {
+            id_ = other.id_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureIdIsMutable();
+            id_.addAll(other.id_);
+          }
+          onChanged();
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        example.BookOuterClass.FindBookByIdsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (example.BookOuterClass.FindBookByIdsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<java.lang.Long> id_ = java.util.Collections.emptyList();
+      private void ensureIdIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          id_ = new java.util.ArrayList<java.lang.Long>(id_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated int64 id = 1;</code>
+       */
+      public java.util.List<java.lang.Long>
+          getIdList() {
+        return java.util.Collections.unmodifiableList(id_);
+      }
+      /**
+       * <code>repeated int64 id = 1;</code>
+       */
+      public int getIdCount() {
+        return id_.size();
+      }
+      /**
+       * <code>repeated int64 id = 1;</code>
+       */
+      public long getId(int index) {
+        return id_.get(index);
+      }
+      /**
+       * <code>repeated int64 id = 1;</code>
+       */
+      public Builder setId(
+          int index, long value) {
+        ensureIdIsMutable();
+        id_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 id = 1;</code>
+       */
+      public Builder addId(long value) {
+        ensureIdIsMutable();
+        id_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 id = 1;</code>
+       */
+      public Builder addAllId(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureIdIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, id_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 id = 1;</code>
+       */
+      public Builder clearId() {
+        id_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:FindBookByIdsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:FindBookByIdsRequest)
+    private static final example.BookOuterClass.FindBookByIdsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new example.BookOuterClass.FindBookByIdsRequest();
+    }
+
+    public static example.BookOuterClass.FindBookByIdsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FindBookByIdsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<FindBookByIdsRequest>() {
+      public FindBookByIdsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new FindBookByIdsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FindBookByIdsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FindBookByIdsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    public example.BookOuterClass.FindBookByIdsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteBookRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:DeleteBookRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -664,17 +1204,17 @@ public final class BookOuterClass {
     long getId();
   }
   /**
-   * Protobuf type {@code DeleteRequest}
+   * Protobuf type {@code DeleteBookRequest}
    */
-  public  static final class DeleteRequest extends
+  public  static final class DeleteBookRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:DeleteRequest)
-      DeleteRequestOrBuilder {
-    // Use DeleteRequest.newBuilder() to construct.
-    private DeleteRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:DeleteBookRequest)
+      DeleteBookRequestOrBuilder {
+    // Use DeleteBookRequest.newBuilder() to construct.
+    private DeleteBookRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private DeleteRequest() {
+    private DeleteBookRequest() {
       id_ = 0L;
     }
 
@@ -683,7 +1223,7 @@ public final class BookOuterClass {
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
     }
-    private DeleteRequest(
+    private DeleteBookRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -721,14 +1261,14 @@ public final class BookOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return example.BookOuterClass.internal_static_DeleteRequest_descriptor;
+      return example.BookOuterClass.internal_static_DeleteBookRequest_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return example.BookOuterClass.internal_static_DeleteRequest_fieldAccessorTable
+      return example.BookOuterClass.internal_static_DeleteBookRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              example.BookOuterClass.DeleteRequest.class, example.BookOuterClass.DeleteRequest.Builder.class);
+              example.BookOuterClass.DeleteBookRequest.class, example.BookOuterClass.DeleteBookRequest.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -776,10 +1316,10 @@ public final class BookOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof example.BookOuterClass.DeleteRequest)) {
+      if (!(obj instanceof example.BookOuterClass.DeleteBookRequest)) {
         return super.equals(obj);
       }
-      example.BookOuterClass.DeleteRequest other = (example.BookOuterClass.DeleteRequest) obj;
+      example.BookOuterClass.DeleteBookRequest other = (example.BookOuterClass.DeleteBookRequest) obj;
 
       boolean result = true;
       result = result && (getId()
@@ -802,58 +1342,58 @@ public final class BookOuterClass {
       return hash;
     }
 
-    public static example.BookOuterClass.DeleteRequest parseFrom(
+    public static example.BookOuterClass.DeleteBookRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.BookOuterClass.DeleteRequest parseFrom(
+    public static example.BookOuterClass.DeleteBookRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.BookOuterClass.DeleteRequest parseFrom(byte[] data)
+    public static example.BookOuterClass.DeleteBookRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.BookOuterClass.DeleteRequest parseFrom(
+    public static example.BookOuterClass.DeleteBookRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.BookOuterClass.DeleteRequest parseFrom(java.io.InputStream input)
+    public static example.BookOuterClass.DeleteBookRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static example.BookOuterClass.DeleteRequest parseFrom(
+    public static example.BookOuterClass.DeleteBookRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static example.BookOuterClass.DeleteRequest parseDelimitedFrom(java.io.InputStream input)
+    public static example.BookOuterClass.DeleteBookRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static example.BookOuterClass.DeleteRequest parseDelimitedFrom(
+    public static example.BookOuterClass.DeleteBookRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static example.BookOuterClass.DeleteRequest parseFrom(
+    public static example.BookOuterClass.DeleteBookRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static example.BookOuterClass.DeleteRequest parseFrom(
+    public static example.BookOuterClass.DeleteBookRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -865,7 +1405,7 @@ public final class BookOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(example.BookOuterClass.DeleteRequest prototype) {
+    public static Builder newBuilder(example.BookOuterClass.DeleteBookRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -880,25 +1420,25 @@ public final class BookOuterClass {
       return builder;
     }
     /**
-     * Protobuf type {@code DeleteRequest}
+     * Protobuf type {@code DeleteBookRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:DeleteRequest)
-        example.BookOuterClass.DeleteRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:DeleteBookRequest)
+        example.BookOuterClass.DeleteBookRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return example.BookOuterClass.internal_static_DeleteRequest_descriptor;
+        return example.BookOuterClass.internal_static_DeleteBookRequest_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return example.BookOuterClass.internal_static_DeleteRequest_fieldAccessorTable
+        return example.BookOuterClass.internal_static_DeleteBookRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                example.BookOuterClass.DeleteRequest.class, example.BookOuterClass.DeleteRequest.Builder.class);
+                example.BookOuterClass.DeleteBookRequest.class, example.BookOuterClass.DeleteBookRequest.Builder.class);
       }
 
-      // Construct using example.BookOuterClass.DeleteRequest.newBuilder()
+      // Construct using example.BookOuterClass.DeleteBookRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -922,23 +1462,23 @@ public final class BookOuterClass {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return example.BookOuterClass.internal_static_DeleteRequest_descriptor;
+        return example.BookOuterClass.internal_static_DeleteBookRequest_descriptor;
       }
 
-      public example.BookOuterClass.DeleteRequest getDefaultInstanceForType() {
-        return example.BookOuterClass.DeleteRequest.getDefaultInstance();
+      public example.BookOuterClass.DeleteBookRequest getDefaultInstanceForType() {
+        return example.BookOuterClass.DeleteBookRequest.getDefaultInstance();
       }
 
-      public example.BookOuterClass.DeleteRequest build() {
-        example.BookOuterClass.DeleteRequest result = buildPartial();
+      public example.BookOuterClass.DeleteBookRequest build() {
+        example.BookOuterClass.DeleteBookRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public example.BookOuterClass.DeleteRequest buildPartial() {
-        example.BookOuterClass.DeleteRequest result = new example.BookOuterClass.DeleteRequest(this);
+      public example.BookOuterClass.DeleteBookRequest buildPartial() {
+        example.BookOuterClass.DeleteBookRequest result = new example.BookOuterClass.DeleteBookRequest(this);
         result.id_ = id_;
         onBuilt();
         return result;
@@ -971,16 +1511,16 @@ public final class BookOuterClass {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof example.BookOuterClass.DeleteRequest) {
-          return mergeFrom((example.BookOuterClass.DeleteRequest)other);
+        if (other instanceof example.BookOuterClass.DeleteBookRequest) {
+          return mergeFrom((example.BookOuterClass.DeleteBookRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(example.BookOuterClass.DeleteRequest other) {
-        if (other == example.BookOuterClass.DeleteRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(example.BookOuterClass.DeleteBookRequest other) {
+        if (other == example.BookOuterClass.DeleteBookRequest.getDefaultInstance()) return this;
         if (other.getId() != 0L) {
           setId(other.getId());
         }
@@ -996,11 +1536,11 @@ public final class BookOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        example.BookOuterClass.DeleteRequest parsedMessage = null;
+        example.BookOuterClass.DeleteBookRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (example.BookOuterClass.DeleteRequest) e.getUnfinishedMessage();
+          parsedMessage = (example.BookOuterClass.DeleteBookRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1046,39 +1586,39 @@ public final class BookOuterClass {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:DeleteRequest)
+      // @@protoc_insertion_point(builder_scope:DeleteBookRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:DeleteRequest)
-    private static final example.BookOuterClass.DeleteRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:DeleteBookRequest)
+    private static final example.BookOuterClass.DeleteBookRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new example.BookOuterClass.DeleteRequest();
+      DEFAULT_INSTANCE = new example.BookOuterClass.DeleteBookRequest();
     }
 
-    public static example.BookOuterClass.DeleteRequest getDefaultInstance() {
+    public static example.BookOuterClass.DeleteBookRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<DeleteRequest>
-        PARSER = new com.google.protobuf.AbstractParser<DeleteRequest>() {
-      public DeleteRequest parsePartialFrom(
+    private static final com.google.protobuf.Parser<DeleteBookRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteBookRequest>() {
+      public DeleteBookRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new DeleteRequest(input, extensionRegistry);
+          return new DeleteBookRequest(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<DeleteRequest> parser() {
+    public static com.google.protobuf.Parser<DeleteBookRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<DeleteRequest> getParserForType() {
+    public com.google.protobuf.Parser<DeleteBookRequest> getParserForType() {
       return PARSER;
     }
 
-    public example.BookOuterClass.DeleteRequest getDefaultInstanceForType() {
+    public example.BookOuterClass.DeleteBookRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2524,15 +3064,20 @@ public final class BookOuterClass {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CreateRequest_descriptor;
+    internal_static_CreateBookRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CreateRequest_fieldAccessorTable;
+      internal_static_CreateBookRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_DeleteRequest_descriptor;
+    internal_static_FindBookByIdsRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_DeleteRequest_fieldAccessorTable;
+      internal_static_FindBookByIdsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_DeleteBookRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_DeleteBookRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Book_descriptor;
   private static final 
@@ -2553,15 +3098,17 @@ public final class BookOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\nbook.proto\032\033google/protobuf/empty.prot" +
-      "o\".\n\rCreateRequest\022\r\n\005title\030\001 \001(\t\022\016\n\006aut" +
-      "hor\030\002 \001(\t\"\033\n\rDeleteRequest\022\n\n\002id\030\001 \001(\003\"1" +
-      "\n\004Book\022\n\n\002id\030\001 \001(\003\022\r\n\005title\030\002 \001(\t\022\016\n\006aut" +
-      "hor\030\003 \001(\t\"\035\n\005Books\022\024\n\005books\030\001 \003(\0132\005.Book" +
-      "2\221\001\n\013BookService\022!\n\006Create\022\016.CreateReque" +
-      "st\032\005.Book\"\000\022+\n\007FindAll\022\026.google.protobuf" +
-      ".Empty\032\006.Books\"\000\0222\n\006Delete\022\016.DeleteReque" +
-      "st\032\026.google.protobuf.Empty\"\000B\t\n\007exampleb" +
-      "\006proto3"
+      "o\"2\n\021CreateBookRequest\022\r\n\005title\030\001 \001(\t\022\016\n" +
+      "\006author\030\002 \001(\t\"\"\n\024FindBookByIdsRequest\022\n\n" +
+      "\002id\030\001 \003(\003\"\037\n\021DeleteBookRequest\022\n\n\002id\030\001 \001" +
+      "(\003\"1\n\004Book\022\n\n\002id\030\001 \001(\003\022\r\n\005title\030\002 \001(\t\022\016\n" +
+      "\006author\030\003 \001(\t\"\035\n\005Books\022\024\n\005books\030\001 \003(\0132\005." +
+      "Book2\307\001\n\013BookService\022%\n\006Create\022\022.CreateB" +
+      "ookRequest\032\005.Book\"\000\022+\n\007FindAll\022\026.google." +
+      "protobuf.Empty\032\006.Books\"\000\022,\n\tFindByIds\022\025." +
+      "FindBookByIdsRequest\032\006.Books\"\000\0226\n\006Delete",
+      "\022\022.DeleteBookRequest\032\026.google.protobuf.E" +
+      "mpty\"\000B\t\n\007exampleb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2576,26 +3123,32 @@ public final class BookOuterClass {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.EmptyProto.getDescriptor(),
         }, assigner);
-    internal_static_CreateRequest_descriptor =
+    internal_static_CreateBookRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_CreateRequest_fieldAccessorTable = new
+    internal_static_CreateBookRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CreateRequest_descriptor,
+        internal_static_CreateBookRequest_descriptor,
         new java.lang.String[] { "Title", "Author", });
-    internal_static_DeleteRequest_descriptor =
+    internal_static_FindBookByIdsRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_DeleteRequest_fieldAccessorTable = new
+    internal_static_FindBookByIdsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_DeleteRequest_descriptor,
+        internal_static_FindBookByIdsRequest_descriptor,
+        new java.lang.String[] { "Id", });
+    internal_static_DeleteBookRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_DeleteBookRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_DeleteBookRequest_descriptor,
         new java.lang.String[] { "Id", });
     internal_static_Book_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_Book_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Book_descriptor,
         new java.lang.String[] { "Id", "Title", "Author", });
     internal_static_Books_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_Books_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Books_descriptor,

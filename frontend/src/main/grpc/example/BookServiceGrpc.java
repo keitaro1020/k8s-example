@@ -29,27 +29,27 @@ public final class BookServiceGrpc {
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   @java.lang.Deprecated // Use {@link #getCreateMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<example.BookOuterClass.CreateRequest,
+  public static final io.grpc.MethodDescriptor<example.BookOuterClass.CreateBookRequest,
       example.BookOuterClass.Book> METHOD_CREATE = getCreateMethod();
 
-  private static volatile io.grpc.MethodDescriptor<example.BookOuterClass.CreateRequest,
+  private static volatile io.grpc.MethodDescriptor<example.BookOuterClass.CreateBookRequest,
       example.BookOuterClass.Book> getCreateMethod;
 
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static io.grpc.MethodDescriptor<example.BookOuterClass.CreateRequest,
+  public static io.grpc.MethodDescriptor<example.BookOuterClass.CreateBookRequest,
       example.BookOuterClass.Book> getCreateMethod() {
-    io.grpc.MethodDescriptor<example.BookOuterClass.CreateRequest, example.BookOuterClass.Book> getCreateMethod;
+    io.grpc.MethodDescriptor<example.BookOuterClass.CreateBookRequest, example.BookOuterClass.Book> getCreateMethod;
     if ((getCreateMethod = BookServiceGrpc.getCreateMethod) == null) {
       synchronized (BookServiceGrpc.class) {
         if ((getCreateMethod = BookServiceGrpc.getCreateMethod) == null) {
           BookServiceGrpc.getCreateMethod = getCreateMethod = 
-              io.grpc.MethodDescriptor.<example.BookOuterClass.CreateRequest, example.BookOuterClass.Book>newBuilder()
+              io.grpc.MethodDescriptor.<example.BookOuterClass.CreateBookRequest, example.BookOuterClass.Book>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "BookService", "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  example.BookOuterClass.CreateRequest.getDefaultInstance()))
+                  example.BookOuterClass.CreateBookRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   example.BookOuterClass.Book.getDefaultInstance()))
                   .setSchemaDescriptor(new BookServiceMethodDescriptorSupplier("Create"))
@@ -92,28 +92,60 @@ public final class BookServiceGrpc {
      return getFindAllMethod;
   }
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getFindByIdsMethod()} instead. 
+  public static final io.grpc.MethodDescriptor<example.BookOuterClass.FindBookByIdsRequest,
+      example.BookOuterClass.Books> METHOD_FIND_BY_IDS = getFindByIdsMethod();
+
+  private static volatile io.grpc.MethodDescriptor<example.BookOuterClass.FindBookByIdsRequest,
+      example.BookOuterClass.Books> getFindByIdsMethod;
+
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static io.grpc.MethodDescriptor<example.BookOuterClass.FindBookByIdsRequest,
+      example.BookOuterClass.Books> getFindByIdsMethod() {
+    io.grpc.MethodDescriptor<example.BookOuterClass.FindBookByIdsRequest, example.BookOuterClass.Books> getFindByIdsMethod;
+    if ((getFindByIdsMethod = BookServiceGrpc.getFindByIdsMethod) == null) {
+      synchronized (BookServiceGrpc.class) {
+        if ((getFindByIdsMethod = BookServiceGrpc.getFindByIdsMethod) == null) {
+          BookServiceGrpc.getFindByIdsMethod = getFindByIdsMethod = 
+              io.grpc.MethodDescriptor.<example.BookOuterClass.FindBookByIdsRequest, example.BookOuterClass.Books>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "BookService", "FindByIds"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  example.BookOuterClass.FindBookByIdsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  example.BookOuterClass.Books.getDefaultInstance()))
+                  .setSchemaDescriptor(new BookServiceMethodDescriptorSupplier("FindByIds"))
+                  .build();
+          }
+        }
+     }
+     return getFindByIdsMethod;
+  }
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   @java.lang.Deprecated // Use {@link #getDeleteMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<example.BookOuterClass.DeleteRequest,
+  public static final io.grpc.MethodDescriptor<example.BookOuterClass.DeleteBookRequest,
       com.google.protobuf.Empty> METHOD_DELETE = getDeleteMethod();
 
-  private static volatile io.grpc.MethodDescriptor<example.BookOuterClass.DeleteRequest,
+  private static volatile io.grpc.MethodDescriptor<example.BookOuterClass.DeleteBookRequest,
       com.google.protobuf.Empty> getDeleteMethod;
 
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static io.grpc.MethodDescriptor<example.BookOuterClass.DeleteRequest,
+  public static io.grpc.MethodDescriptor<example.BookOuterClass.DeleteBookRequest,
       com.google.protobuf.Empty> getDeleteMethod() {
-    io.grpc.MethodDescriptor<example.BookOuterClass.DeleteRequest, com.google.protobuf.Empty> getDeleteMethod;
+    io.grpc.MethodDescriptor<example.BookOuterClass.DeleteBookRequest, com.google.protobuf.Empty> getDeleteMethod;
     if ((getDeleteMethod = BookServiceGrpc.getDeleteMethod) == null) {
       synchronized (BookServiceGrpc.class) {
         if ((getDeleteMethod = BookServiceGrpc.getDeleteMethod) == null) {
           BookServiceGrpc.getDeleteMethod = getDeleteMethod = 
-              io.grpc.MethodDescriptor.<example.BookOuterClass.DeleteRequest, com.google.protobuf.Empty>newBuilder()
+              io.grpc.MethodDescriptor.<example.BookOuterClass.DeleteBookRequest, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "BookService", "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  example.BookOuterClass.DeleteRequest.getDefaultInstance()))
+                  example.BookOuterClass.DeleteBookRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
                   .setSchemaDescriptor(new BookServiceMethodDescriptorSupplier("Delete"))
@@ -153,7 +185,7 @@ public final class BookServiceGrpc {
 
     /**
      */
-    public void create(example.BookOuterClass.CreateRequest request,
+    public void create(example.BookOuterClass.CreateBookRequest request,
         io.grpc.stub.StreamObserver<example.BookOuterClass.Book> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
@@ -167,7 +199,14 @@ public final class BookServiceGrpc {
 
     /**
      */
-    public void delete(example.BookOuterClass.DeleteRequest request,
+    public void findByIds(example.BookOuterClass.FindBookByIdsRequest request,
+        io.grpc.stub.StreamObserver<example.BookOuterClass.Books> responseObserver) {
+      asyncUnimplementedUnaryCall(getFindByIdsMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void delete(example.BookOuterClass.DeleteBookRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
@@ -178,7 +217,7 @@ public final class BookServiceGrpc {
             getCreateMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                example.BookOuterClass.CreateRequest,
+                example.BookOuterClass.CreateBookRequest,
                 example.BookOuterClass.Book>(
                   this, METHODID_CREATE)))
           .addMethod(
@@ -189,10 +228,17 @@ public final class BookServiceGrpc {
                 example.BookOuterClass.Books>(
                   this, METHODID_FIND_ALL)))
           .addMethod(
+            getFindByIdsMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                example.BookOuterClass.FindBookByIdsRequest,
+                example.BookOuterClass.Books>(
+                  this, METHODID_FIND_BY_IDS)))
+          .addMethod(
             getDeleteMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                example.BookOuterClass.DeleteRequest,
+                example.BookOuterClass.DeleteBookRequest,
                 com.google.protobuf.Empty>(
                   this, METHODID_DELETE)))
           .build();
@@ -219,7 +265,7 @@ public final class BookServiceGrpc {
 
     /**
      */
-    public void create(example.BookOuterClass.CreateRequest request,
+    public void create(example.BookOuterClass.CreateBookRequest request,
         io.grpc.stub.StreamObserver<example.BookOuterClass.Book> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
@@ -235,7 +281,15 @@ public final class BookServiceGrpc {
 
     /**
      */
-    public void delete(example.BookOuterClass.DeleteRequest request,
+    public void findByIds(example.BookOuterClass.FindBookByIdsRequest request,
+        io.grpc.stub.StreamObserver<example.BookOuterClass.Books> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getFindByIdsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void delete(example.BookOuterClass.DeleteBookRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
@@ -262,7 +316,7 @@ public final class BookServiceGrpc {
 
     /**
      */
-    public example.BookOuterClass.Book create(example.BookOuterClass.CreateRequest request) {
+    public example.BookOuterClass.Book create(example.BookOuterClass.CreateBookRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
@@ -276,7 +330,14 @@ public final class BookServiceGrpc {
 
     /**
      */
-    public com.google.protobuf.Empty delete(example.BookOuterClass.DeleteRequest request) {
+    public example.BookOuterClass.Books findByIds(example.BookOuterClass.FindBookByIdsRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getFindByIdsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.google.protobuf.Empty delete(example.BookOuterClass.DeleteBookRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
@@ -303,7 +364,7 @@ public final class BookServiceGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<example.BookOuterClass.Book> create(
-        example.BookOuterClass.CreateRequest request) {
+        example.BookOuterClass.CreateBookRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
@@ -318,8 +379,16 @@ public final class BookServiceGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<example.BookOuterClass.Books> findByIds(
+        example.BookOuterClass.FindBookByIdsRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getFindByIdsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> delete(
-        example.BookOuterClass.DeleteRequest request) {
+        example.BookOuterClass.DeleteBookRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
@@ -327,7 +396,8 @@ public final class BookServiceGrpc {
 
   private static final int METHODID_CREATE = 0;
   private static final int METHODID_FIND_ALL = 1;
-  private static final int METHODID_DELETE = 2;
+  private static final int METHODID_FIND_BY_IDS = 2;
+  private static final int METHODID_DELETE = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -347,15 +417,19 @@ public final class BookServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_CREATE:
-          serviceImpl.create((example.BookOuterClass.CreateRequest) request,
+          serviceImpl.create((example.BookOuterClass.CreateBookRequest) request,
               (io.grpc.stub.StreamObserver<example.BookOuterClass.Book>) responseObserver);
           break;
         case METHODID_FIND_ALL:
           serviceImpl.findAll((com.google.protobuf.Empty) request,
               (io.grpc.stub.StreamObserver<example.BookOuterClass.Books>) responseObserver);
           break;
+        case METHODID_FIND_BY_IDS:
+          serviceImpl.findByIds((example.BookOuterClass.FindBookByIdsRequest) request,
+              (io.grpc.stub.StreamObserver<example.BookOuterClass.Books>) responseObserver);
+          break;
         case METHODID_DELETE:
-          serviceImpl.delete((example.BookOuterClass.DeleteRequest) request,
+          serviceImpl.delete((example.BookOuterClass.DeleteBookRequest) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         default:
@@ -421,6 +495,7 @@ public final class BookServiceGrpc {
               .setSchemaDescriptor(new BookServiceFileDescriptorSupplier())
               .addMethod(getCreateMethod())
               .addMethod(getFindAllMethod())
+              .addMethod(getFindByIdsMethod())
               .addMethod(getDeleteMethod())
               .build();
         }

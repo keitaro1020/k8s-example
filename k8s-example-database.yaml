@@ -49,3 +49,55 @@ spec:
     - protocol: TCP
       port: 5432
       targetPort: 5432
+---
+# database deployment
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: bookshelf-db-deployment
+  namespace: bookshelf-system
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: bookshelf-db
+    spec:
+      containers:
+        - name: bookshelf-db
+          image: postgres:9.6.2
+          env:
+            - name: POSTGRES_USER
+              value: user
+            - name: POSTGRES_PASSWORD
+              value: password
+            - name: POSTGRES_DB
+              value: book
+          ports:
+            - containerPort: 5432
+          volumeMounts:
+            - mountPath: /var/lib/postgresql
+              name: bookshelf-db-data
+          resources:
+            limits:
+              memory: "512Mi"
+            requests:
+              memory: "256Mi"
+      restartPolicy: Always
+      volumes:
+        - name: bookshelf-db-data
+          emptyDir: {}
+---
+# database service
+apiVersion: v1
+kind: Service
+metadata:
+  name: bookshelf-db
+  namespace: bookshelf-system
+spec:
+  selector:
+    app: bookshelf-db
+  ports:
+    - protocol: TCP
+      port: 5432
+      targetPort: 5432

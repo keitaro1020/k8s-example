@@ -7,13 +7,14 @@ import example.BookOuterClass
 import example.BookServiceGrpc
 import example.dao.BookDao
 import example.model.Book
+import java.util.logging.Logger
 
 @GRpcService
 class BookService(val bookDao: BookDao): BookServiceGrpc.BookServiceImplBase() {
-    override fun create(request: BookOuterClass.CreateRequest, responseObserver: StreamObserver<BookOuterClass.Book>) {
+    override fun create(request: BookOuterClass.CreateBookRequest, responseObserver: StreamObserver<BookOuterClass.Book>) {
         val book = bookDao.insert(Book(id = null, title = request.title, author = request.author))
 
-        if(book.id != null) {
+        book.id?.let {
             val builder = BookOuterClass.Book.newBuilder()
             builder.let{
                 it.id = book.id
@@ -44,9 +45,30 @@ class BookService(val bookDao: BookDao): BookServiceGrpc.BookServiceImplBase() {
         responseObserver.onCompleted()
     }
 
-    override fun delete(request: BookOuterClass.DeleteRequest, responseObserver: StreamObserver<Empty>) {
+    override fun delete(request: BookOuterClass.DeleteBookRequest, responseObserver: StreamObserver<Empty>) {
         bookDao.delete(id = request.id)
         responseObserver.onNext(Empty.newBuilder().build())
+        responseObserver.onCompleted()
+    }
+
+    val log = Logger.getLogger(this.javaClass.name)
+    override fun findByIds(request: BookOuterClass.FindBookByIdsRequest, responseObserver: StreamObserver<BookOuterClass.Books>) {
+        val list = bookDao.findByIds(request.idList)
+        log.info("${request.idList}: ${list}")
+
+        val builder = BookOuterClass.Books.newBuilder()
+        builder.addAllBooks(
+                list.map { book ->
+                    val builder = BookOuterClass.Book.newBuilder()
+                    builder.let {
+                        it.id = book?.id ?: 0
+                        it.title = book.title
+                        it.author = book.author
+                    }
+                    builder.build()
+                }
+        )
+        responseObserver.onNext(builder.build())
         responseObserver.onCompleted()
     }
 }

@@ -10,6 +10,7 @@ import example.BookOuterClass
 import example.BookServiceGrpc
 import example.controller.HealthzController
 import example.model.Book
+import reactor.core.publisher.Flux
 import java.util.logging.Logger
 
 @Component
@@ -30,7 +31,7 @@ class BookClient (
         val channel = getChannel()
         try {
             val stub = BookServiceGrpc.newBlockingStub(getChannel())
-            val reqBuilder = BookOuterClass.CreateRequest.newBuilder()
+            val reqBuilder = BookOuterClass.CreateBookRequest.newBuilder()
             reqBuilder.let {
                 it.title = book.title
                 it.author = book.author
@@ -46,7 +47,7 @@ class BookClient (
         }
     }
 
-    fun findAll(): Mono<List<Book>> {
+    fun findAll(): Flux<Book> {
 
         val channel = getChannel()
         try {
@@ -60,7 +61,7 @@ class BookClient (
                 )
             }
 
-            return Mono.just(res)
+            return Flux.fromStream(res.stream())
         } finally {
             channel.shutdown()
         }
@@ -68,11 +69,10 @@ class BookClient (
 
     fun delete(id: Long) {
 
-        logger.info("id:${id}")
         val channel = getChannel()
         try {
             val stub = BookServiceGrpc.newBlockingStub(getChannel())
-            val reqBuilder = BookOuterClass.DeleteRequest.newBuilder()
+            val reqBuilder = BookOuterClass.DeleteBookRequest.newBuilder()
             reqBuilder.id = id
             stub.delete(reqBuilder.build())
         } finally {
@@ -80,7 +80,28 @@ class BookClient (
         }
     }
 
-    val logger = Logger.getLogger(HealthzController::class.java.name)
+    fun findByIds(ids: List<Long>): Flux<Book> {
+
+        val channel = getChannel()
+        try {
+            val stub = BookServiceGrpc.newBlockingStub(getChannel())
+            val reqBuilder = BookOuterClass.FindBookByIdsRequest.newBuilder()
+            reqBuilder.addAllId(ids)
+            val res = stub.findByIds(reqBuilder.build()).booksList.map {
+                Book(
+                        id = it.id,
+                        title = it.title,
+                        author = it.author
+                )
+            }
+
+            return Flux.fromStream(res.stream())
+        } finally {
+            channel.shutdown()
+        }
+    }
+
+    val logger = Logger.getLogger(this.javaClass.name)
     private fun getChannel() : ManagedChannel {
         logger.info("hostname: ${hostname}, port: ${port}")
 

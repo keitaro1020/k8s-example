@@ -5,17 +5,22 @@ import "google/protobuf/empty.proto";
 option java_package = "example";
 
 service BookService {
-    rpc Create ( CreateRequest ) returns ( Book ) {}
+    rpc Create ( CreateBookRequest ) returns ( Book ) {}
     rpc FindAll ( google.protobuf.Empty ) returns ( Books ) {}
-    rpc Delete ( DeleteRequest ) returns ( google.protobuf.Empty ) {}
+    rpc FindByIds ( FindBookByIdsRequest ) returns ( Books ) {}
+    rpc Delete ( DeleteBookRequest ) returns ( google.protobuf.Empty ) {}
 }
 
-message CreateRequest {
+message CreateBookRequest {
     string title = 1;
     string author = 2;
 }
 
-message DeleteRequest {
+message FindBookByIdsRequest {
+    repeated int64 id = 1;
+}
+
+message DeleteBookRequest {
     int64 id = 1;
 }
 

@@ -9,6 +9,9 @@ grpc:
   book:
     hostname: localhost
     port: 6565
+  bookshelf:
+    hostname: localhost
+    port: 6566
 
 ---
 spring:
@@ -16,4 +19,7 @@ spring:
 grpc:
   book:
     hostname: bookservice.bookshelf-system
+    port: 6565
+  bookshelf:
+    hostname: bookshelfservice.bookshelf-system
     port: 6565
