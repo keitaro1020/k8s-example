@@ -72,7 +72,7 @@ spec:
             - name: POSTGRES_PASSWORD
               value: password
             - name: POSTGRES_DB
-              value: book
+              value: bookshelf
           ports:
             - containerPort: 5432
           volumeMounts:
