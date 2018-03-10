@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: bookservice
-        image: example/bookservice:0.0.2
+        image: example/bookservice:0.0.3
         env:
         - name: JAVA_OPTS
           value: -Dspring.profiles.active=k8s

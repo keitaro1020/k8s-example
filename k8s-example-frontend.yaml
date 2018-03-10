@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: example/frontend:0.0.3
+        image: example/frontend:0.0.4
         env:
         - name: JAVA_OPTS
           value: -Dspring.profiles.active=k8s
