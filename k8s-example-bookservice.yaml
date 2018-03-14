@@ -9,7 +9,7 @@ spec:
   selector:
     matchLabels:
       app: bookservice
-  minReadySeconds: 60
+  minReadySeconds: 30
   progressDeadlineSeconds: 600
   strategy:
     type: RollingUpdate
@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: bookservice
-        image: example/bookservice:0.0.3
+        image: example/bookservice:0.0.4
         env:
         - name: JAVA_OPTS
           value: -Dspring.profiles.active=k8s

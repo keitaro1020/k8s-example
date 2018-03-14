@@ -9,7 +9,7 @@ spec:
   selector:
     matchLabels:
       app: frontend
-  minReadySeconds: 60
+  minReadySeconds: 30
   progressDeadlineSeconds: 600
   strategy:
     type: RollingUpdate
