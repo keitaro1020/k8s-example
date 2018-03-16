@@ -1,5 +1,5 @@
 group 'example'
-version '0.0.4'
+version '0.0.5'
 
 buildscript {
     ext {
@@ -112,4 +112,16 @@ docker {
     name "${project.group}/${jar.baseName}:${version}"
     files jar.archivePath
     buildArgs(['JAR_FILE': "${jar.archiveName}"])
+}
+
+task buildWeb(type: Exec) {
+    workingDir './web'
+    commandLine 'npm', 'run', 'build'
+}
+build.dependsOn buildWeb
+
+task webpack(type: Exec) {
+    workingDir './web'
+    commandLine 'npm', 'install'
+    commandLine './node_modules/.bin/webpack', '--progress', '--watch', '--config', './webpack.config.js'
 }
